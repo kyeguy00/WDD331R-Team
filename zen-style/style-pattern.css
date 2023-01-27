@@ -1,24 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Slackey&display=swap");
 h2,
 h3,
 h4 {
-  font-family: "arial narrow", Arial, Verdana, sans-serif;
+  font-family: "Jost", arial, sans-serif;
   margin: 0;
 }
 
 h1 {
-  background: #ea2e49;
+  border-left: 5px solid #e16340;
+  border-bottom: 5px solid #e16340;
+  border-radius: 5px;
+  font-family: verdana, arial, sans-serif;
+  font-size: 2.5em;
+  line-height: normal;
   color: #fff;
   display: inline-block;
+  font-family: "Slackey", arial, sans-serif;
   font-weight: normal;
   margin-bottom: 1em;
-  padding: 0.5em 1em;
+  padding: 0.5em;
 }
 
 h2 {
   color: #fff;
-  font-weight: 900; /* Heavy */
+  font-weight: 300;
   font-size: 6em;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
   line-height: 1em;
 }
 
@@ -54,7 +61,7 @@ a {
 }
 
 a:hover {
-  border-color: #ea2e49;
+  border-color: #e16340;
 }
 
 * {
@@ -70,7 +77,7 @@ body {
   font-family: verdana, arial, sans-serif;
   font-size: 85%;
   color: #333;
-  background-color: #77c4d3;
+  background-color: rgb(247, 194, 98);
   margin: 0;
   padding: 1em;
 }
@@ -101,15 +108,15 @@ section {
 }
 
 .primary {
-  background-color: #77c4d3;
+  background-color: rgb(247, 194, 98);
 }
 
 .accent1 {
-  background-color: #ea2e49;
+  background-color: #e16340;
 }
 
 .accent2 {
-  background-color: rgba(246, 247, 146, 0.9);
+  background-color: #f0d58c;
 }
 
 .text-dark {
