@@ -69,7 +69,7 @@ a:hover {
   font-weight: 300;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: #fff;
+  color: #333;
 }
 
 .summary {
@@ -115,6 +115,43 @@ body {
   background-color: rgb(247, 194, 98);
   margin: 0;
   padding: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    border-radius: 30px;
+    background-color: white;
+  }
+  h1 {
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    color: #333;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    color: #333;
+    font-size: 1.5rem;
+  }
+  #zen-summary p {
+    color: #333;
+  }
+  #zen-summary a {
+    color: #333;
+  }
+  .preamble {
+    background-color: grey;
+    color: #fff;
+    margin-left: 0;
+    padding: 1rem;
+  }
+  .preamble h3 {
+    color: #fff;
+  }
+  h3 {
+    color: #333;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

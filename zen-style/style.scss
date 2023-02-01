@@ -19,3 +19,45 @@ body {
   margin: 0;
   padding: 1em;
 }
+
+@media only screen and (max-width: $breakpoint-phone){
+
+  body {
+    border-radius: 30px;
+    background-color: white;
+  }
+  h1 {
+    font-size: 2.5rem;
+    padding: 0;
+    margin: 0;
+    color: $text-dark;
+  }
+  h2 {
+    margin: 0;
+    padding: 0;
+    color: $text-dark;
+    font-size: 1.5rem;
+   }
+
+   #zen-summary{
+    p {
+      color: $text-dark;
+    }
+    a {
+      color: $text-dark;
+    }
+   }
+
+   .preamble {
+    background-color: grey;
+    color: $text-light;
+    margin-left: 0;
+    padding: 1rem;
+    h3 {
+      color: $text-light;
+    }
+   }
+   h3 {
+    color: $text-dark;
+   }
+}
