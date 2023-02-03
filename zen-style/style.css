@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;500;700&family=Slackey&display=swap");
-/* #A2ABB5; */
+/* #f0d58c; /* #6D8EA0; #A2ABB5; */
 /* #F7C262 */
 /* #36383A */
 h2,
@@ -11,30 +11,31 @@ h4 {
 
 h1 {
   font-family: verdana, arial, sans-serif;
-  font-size: 4.5em;
+  font-size: 2.5em;
   line-height: normal;
   color: #333;
   display: inline-block;
   font-family: "Slackey", arial, sans-serif;
   font-weight: normal;
-  padding: 0.5em;
+  padding: 0;
+  margin: 0;
 }
 
 h2 {
-  color: #fff;
-  font-weight: 300;
-  font-size: 3em;
+  color: #e16340;
+  font-weight: 500;
+  font-size: 1.5em;
   letter-spacing: 2px;
   line-height: 1em;
-  padding: 0.5em;
+  padding: 0;
 }
 
 h3 {
-  font-size: 2.25em;
+  font-size: 2em;
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
-  padding: 0.5em 0 0.25em 0;
+  padding: 2% 0;
   color: #e16340;
 }
 
@@ -43,15 +44,15 @@ h4 {
   font-weight: 200; /* Thin */
   letter-spacing: 1px;
   line-height: 1em;
-  margin: 0.5em 0;
+  margin: 0;
 }
 
 p {
   font-family: verdana, arial, sans-serif;
   font-size: 1em;
   line-height: 1.5em;
-  padding: 0.5em;
-  margin: 1em;
+  /* padding: 0.5em; */
+  /* margin: 1em; */
 }
 
 a {
@@ -72,31 +73,72 @@ a:hover {
   color: #333;
 }
 
+/************** HEADER **************/
+header {
+  padding: 5%;
+  background-color: #f0d58c;
+}
+
+/************* SUMMARY *************/
 .summary {
-  font-weight: 300;
-  letter-spacing: 2px;
-  text-transform: uppercase;
+  /* @include atoms.uppercase($text-dark);*/
+  padding: 1.5% 5%;
   color: #fff;
-  padding: 15% 0;
+  font-weight: 500;
+  background: #333;
 }
 .summary p:last-child {
-  border-top: 1px solid #e16340;
-  margin-top: 1em;
-  padding-top: 1.5em;
+  /*   @include atoms.divider; */
 }
 .summary a {
   color: #fff;
 }
 
+/******** PREAMBLE ************/
 .preamble {
-  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5% 5%;
+  background: #E5EBEA;
   color: #333;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
 }
 
-.intro {
-  padding: 5%;
+/************** MAIN ***************/
+/*************** EXPLANATION ************/
+.explanation {
+  padding: 1.5% 5%;
+  background: #E5EBEA;
+}
+
+/************* PARTICIPATION ************/
+.participation {
+  padding: 1.5% 5%;
+}
+
+/************ BENEFITS ****************/
+.benefits {
+  padding: 1.5% 5%;
+}
+
+/*********** REQUIREMENTS ***********/
+.requirements {
+  padding: 1.5% 5%;
+  background: #E5EBEA;
+}
+
+/*********** SIDE BAR ***************/
+.sidebar {
+  padding: 1.5% 5%;
+  background-color: #f0d58c;
+}
+
+/*********** FOOTER **************/
+footer {
+  padding: 1.5% 5%;
+  background: #333;
+  color: #fff;
+}
+
+footer a {
+  color: #fff;
 }
 
 * {
@@ -104,54 +146,15 @@ a:hover {
 }
 
 html {
-  background-color: #6D8EA0;
-  padding: 5%;
+  background-color: white;
+  /* padding: 5%; */
 }
 
 body {
   font-family: verdana, arial, sans-serif;
-  font-size: 85%;
+  font-size: 12px;
   color: #333;
-  background-color: rgb(247, 194, 98);
   margin: 0;
-  padding: 1em;
-}
-
-@media only screen and (max-width: 600px) {
-  body {
-    border-radius: 30px;
-    background-color: white;
-  }
-  h1 {
-    font-size: 2.5rem;
-    padding: 0;
-    margin: 0;
-    color: #333;
-  }
-  h2 {
-    margin: 0;
-    padding: 0;
-    color: #333;
-    font-size: 1.5rem;
-  }
-  #zen-summary p {
-    color: #333;
-  }
-  #zen-summary a {
-    color: #333;
-  }
-  .preamble {
-    background-color: grey;
-    color: #fff;
-    margin-left: 0;
-    padding: 1rem;
-  }
-  .preamble h3 {
-    color: #fff;
-  }
-  h3 {
-    color: #333;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */

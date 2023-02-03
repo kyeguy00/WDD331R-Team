@@ -9,19 +9,80 @@
     @include atoms.uppercase($text-dark);
   }
 }
+
+
+
+/************** HEADER **************/
+
+header {
+  padding: 5%;
+  background-color: $accent2;
+}
+
+
+/************* SUMMARY *************/
+
 .summary {
-  @include atoms.uppercase($text-light);
-  padding: 15% 0;
+  /* @include atoms.uppercase($text-dark);*/
+  padding: 1.5% 5%;
+  color: $text-light;
+  font-weight: 500;
+  background: $text-dark;
   p:last-child {
-    @include atoms.divider;
+  /*   @include atoms.divider; */
   }
   a {
     color: $text-light; //in this case the link wants to be light instead of the default dark
   }
 }
+
+
+/******** PREAMBLE ************/
+
 .preamble {
-  background: rgba(255, 255, 255, 0.9);
+  padding: 1.5% 5%;
+  background: $grey;
   color: $text-dark;
-  margin-left: -30%;
-  padding: 5% 5% 5% 30%;
+}
+
+/************** MAIN ***************/
+
+/*************** EXPLANATION ************/
+.explanation {
+  padding: 1.5% 5%;
+  background: $grey;
+}
+/************* PARTICIPATION ************/
+.participation {
+  padding: 1.5% 5%;
+}
+
+
+/************ BENEFITS ****************/
+.benefits {
+  padding: 1.5% 5%;
+}
+
+/*********** REQUIREMENTS ***********/
+.requirements {
+  padding: 1.5% 5%;
+  background: $grey;
+}
+
+/*********** SIDE BAR ***************/
+.sidebar {
+  padding: 1.5% 5%;
+  background-color: $accent2;
+}
+
+
+/*********** FOOTER **************/
+footer {
+  padding: 1.5% 5%;
+  background: $text-dark;
+  color: $text-light;
+}
+
+footer a {
+  color: $text-light;
 }

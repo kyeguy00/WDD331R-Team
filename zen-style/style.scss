@@ -8,56 +8,21 @@
 }
 html {
   background-color: $background-color;
-  padding: 5%;
+  /* padding: 5%; */
 }
 
 body {
   font-family: $fonts-body;
-  font-size: 85%;
+  font-size: 12px;
   color: $text-dark;
-  background-color: $primary;
   margin: 0;
-  padding: 1em;
+
 }
 
-@media only screen and (max-width: $breakpoint-phone){
 
-  body {
-    border-radius: 30px;
-    background-color: white;
-  }
-  h1 {
-    font-size: 2.5rem;
-    padding: 0;
-    margin: 0;
-    color: $text-dark;
-  }
-  h2 {
-    margin: 0;
-    padding: 0;
-    color: $text-dark;
-    font-size: 1.5rem;
-   }
 
-   #zen-summary{
-    p {
-      color: $text-dark;
-    }
-    a {
-      color: $text-dark;
-    }
-   }
+@media only screen and (min-width: $breakpoint-phone){
 
-   .preamble {
-    background-color: grey;
-    color: $text-light;
-    margin-left: 0;
-    padding: 1rem;
-    h3 {
-      color: $text-light;
-    }
-   }
-   h3 {
-    color: $text-dark;
-   }
+
+
 }
