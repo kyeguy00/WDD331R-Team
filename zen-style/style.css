@@ -146,18 +146,29 @@ footer a {
 }
 
 html {
-  background-color: white;
+  background-color: #e16340;
   /* padding: 5%; */
 }
 
 body {
   font-family: verdana, arial, sans-serif;
-  font-size: 12px;
+  font-size: 13px;
   color: #333;
   margin: 0;
 }
 
+header {
+  padding-bottom: 100px;
+}
+
 @media only screen and (min-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .page-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   /******  Header & Intro ******/
   .intro {
     display: grid;
@@ -166,7 +177,7 @@ body {
     background-color: #f0d58c;
   }
   header {
-    grid-column: 2/span 9;
+    grid-column: 1/span 9;
     font-size: 25px;
   }
   .summary {

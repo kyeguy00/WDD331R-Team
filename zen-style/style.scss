@@ -7,23 +7,33 @@
   box-sizing: border-box;
 }
 html {
-  background-color: $background-color;
+  background-color: $accent1;
   /* padding: 5%; */
 }
 
 body {
   font-family: $fonts-body;
-  font-size: 12px;
+  font-size: $font-sm;
   color: $text-dark;
   margin: 0;
 
+}
+
+header {
+  padding-bottom: 100px;
 }
 
 
 
 @media only screen and (min-width: $breakpoint-phone){
 
-
+body {
+  font-size: $font-lrg;
+}
+.page-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 
 /******  Header & Intro ******/
 
@@ -36,8 +46,9 @@ body {
 }
 
 header {
-  grid-column: 2 / span 9;
+  grid-column: 1 / span 9;
   font-size: 25px;
+
 }
 
 .summary {
