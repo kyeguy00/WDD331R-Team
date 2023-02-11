@@ -25,4 +25,100 @@ body {
 
 
 
+/******  Header & Intro ******/
+
+.intro {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 20px;
+  background-color: $accent2;
+
+}
+
+header {
+  grid-column: 2 / span 9;
+  font-size: 25px;
+}
+
+.summary {
+  grid-column: 1 / -1;
+}
+
+.preamble {
+  background-color: $grey;
+  grid-column: 1 / -1;
+}
+
+
+/*  Organize paragraphs in 2 columns by using nth child
+    to place into grid columns???? */
+
+
+
+/****** MAIN *******/
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 20px;
+  background-color: $background-color;
+}
+
+.explanation {
+  grid-column: 1/ span 6;
+  grid-row: 1;
+  background-color: $background-color;
+  margin: $t-margin1 $font-margin;
+}
+
+.participation {
+  grid-column: 7/ span 6;
+  grid-row: 2;
+  background-color: $background-color;
+  margin: $t-margin1 $font-margin;
+}
+
+.benefits {
+  grid-column: 1/ span 6;
+  grid-row: 3;
+  background-color: $background-color;
+  margin: $t-margin1 $font-margin;
+}
+
+.requirements {
+  grid-column: 1/ span 12;
+  /* arrange in 2 columns by <p> nth child */
+}
+
+
+footer {
+  grid-column: 1/span 12;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0 20px;
+  background-color: $accent2;
+}
+
+.design-selection {
+  grid-column: 8/-1;
+  grid-row: 1;
+}
+
+.design-archives {
+  grid-column: 8/-1;
+  grid-row: 2;
+}
+
+.zen-resources {
+  grid-column: 8/-1;
+  grid-row: 3;
+}
+
+
 }

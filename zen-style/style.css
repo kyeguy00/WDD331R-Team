@@ -157,4 +157,80 @@ body {
   margin: 0;
 }
 
+@media only screen and (min-width: 481px) {
+  /******  Header & Intro ******/
+  .intro {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    background-color: #f0d58c;
+  }
+  header {
+    grid-column: 2/span 9;
+    font-size: 25px;
+  }
+  .summary {
+    grid-column: 1/-1;
+  }
+  .preamble {
+    background-color: #E5EBEA;
+    grid-column: 1/-1;
+  }
+  /*  Organize paragraphs in 2 columns by using nth child
+      to place into grid columns???? */
+  /****** MAIN *******/
+  .main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    background-color: white;
+  }
+  .explanation {
+    grid-column: 1/span 6;
+    grid-row: 1;
+    background-color: white;
+    margin: 10px 25px;
+  }
+  .participation {
+    grid-column: 7/span 6;
+    grid-row: 2;
+    background-color: white;
+    margin: 10px 25px;
+  }
+  .benefits {
+    grid-column: 1/span 6;
+    grid-row: 3;
+    background-color: white;
+    margin: 10px 25px;
+  }
+  .requirements {
+    grid-column: 1/span 12;
+    /* arrange in 2 columns by <p> nth child */
+  }
+  footer {
+    grid-column: 1/span 12;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    background-color: #f0d58c;
+  }
+  .design-selection {
+    grid-column: 8/-1;
+    grid-row: 1;
+  }
+  .design-archives {
+    grid-column: 8/-1;
+    grid-row: 2;
+  }
+  .zen-resources {
+    grid-column: 8/-1;
+    grid-row: 3;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
