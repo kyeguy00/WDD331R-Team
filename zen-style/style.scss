@@ -24,6 +24,37 @@ header {
 }
 
 
+/**********************************/
+/****** INSERT IMAGES *************/
+h2::after {
+  content:  url(images/Boombox-137.png);
+  position:absolute;
+  top: -150px;
+  left: 850px;
+  transform: scale(.65);
+
+}
+
+.explanation::after {
+  content: url(images/stickers-187.png); /* subwoofer */
+  transform: scale(.5);
+
+}
+
+.participation::before {
+  content: url(images/stickers-186.png); /* speaker light */
+}
+
+.benefits::after {
+  content: url(images/Boombox-138.png); /* speaker dark */
+}
+
+.sidebar::before {
+  content: url(images/stickers-185.png); /* speaker dark */
+  grid-column: 1/ span 6;
+}
+
+
 
 @media only screen and (min-width: $breakpoint-phone){
 
@@ -84,7 +115,7 @@ header {
 
 .participation {
   grid-column: 7/ span 6;
-  grid-row: 2;
+  grid-row: 1;
   background-color: $background-color;
   margin: $t-margin1 $font-margin;
 }
