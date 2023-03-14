@@ -164,35 +164,134 @@ body {
 }
 
 header {
-  padding-bottom: 100px;
+  position: relative;
 }
 
+/**********************/
+/******* ANIMATIONS ************/
+@keyframes boombox {
+  0% {
+    transform: scale(0.35);
+    rotate: -15deg;
+  }
+  10% {
+    transform: scale(0.4);
+  }
+  15% {
+    transform: scale(0.35);
+  }
+  20% {
+    transform: scale(0.4);
+  }
+  25% {
+    transform: scale(0.35);
+    rotate: 15deg;
+  }
+  30% {
+    transform: scale(0.4);
+  }
+  35% {
+    transform: scale(0.35);
+  }
+  40% {
+    transform: scale(0.4);
+  }
+  45% {
+    transform: scale(0.35);
+  }
+  50% {
+    transform: scale(0.4);
+    rotate: -15deg;
+  }
+  55% {
+    transform: scale(0.35);
+  }
+  60% {
+    transform: scale(0.4);
+  }
+  65% {
+    transform: scale(0.35);
+  }
+  70% {
+    transform: scale(0.4);
+  }
+  75% {
+    transform: scale(0.35);
+    rotate: 15deg;
+  }
+  80% {
+    transform: scale(0.4);
+  }
+  85% {
+    transform: scale(0.35);
+  }
+  90% {
+    transform: scale(0.4);
+  }
+  95% {
+    transform: scale(0.35);
+  }
+  100% {
+    transform: scale(0.4);
+    rotate: -15deg;
+  }
+}
 /**********************************/
 /****** INSERT IMAGES *************/
 h2::after {
   content: url(images/Boombox-137.png);
   position: absolute;
-  top: -150px;
-  left: 850px;
-  transform: scale(0.65);
+  top: -200px;
+  padding-left: 2rem;
+  transform: scale(0.35);
+  animation-name: boombox;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
+  filter: drop-shadow(20px 15px 40px #0E1131);
+}
+
+.explanation, .participation {
+  position: relative;
 }
 
 .explanation::after {
   content: url(images/stickers-187.png); /* subwoofer */
-  transform: scale(0.5);
+  position: absolute;
+  top: 0;
+  left: 400px;
 }
 
 .participation::before {
   content: url(images/stickers-186.png); /* speaker light */
+  position: absolute;
+  top: 50px;
+  right: 450px;
+}
+
+.benefits {
+  position: relative;
 }
 
 .benefits::after {
   content: url(images/Boombox-138.png); /* speaker dark */
+  position: absolute;
+  z-index: 100;
+  bottom: -185px;
+  left: 350px;
+  transform: scale(0.65);
+}
+
+.sidebar {
+  position: relative;
 }
 
 .sidebar::before {
   content: url(images/stickers-185.png); /* speaker dark */
-  grid-column: 1/span 6;
+  position: absolute;
+  left: 500px;
+  top: -75px;
+  transform: scale(0.75);
 }
 
 @media only screen and (min-width: 600px) {
@@ -238,13 +337,13 @@ h2::after {
   }
   .participation {
     grid-column: 7/span 6;
-    grid-row: 1;
+    grid-row: 2;
     background-color: white;
     margin: 10px 25px;
   }
   .benefits {
     grid-column: 1/span 6;
-    grid-row: 3;
+    grid-row: 4;
     background-color: white;
     margin: 10px 25px;
   }
@@ -265,16 +364,16 @@ h2::after {
     background-color: #f0d58c;
   }
   .design-selection {
-    grid-column: 8/-1;
+    grid-column: 1/-1;
     grid-row: 1;
   }
   .design-archives {
-    grid-column: 8/-1;
+    grid-column: 1/-1;
     grid-row: 2;
   }
   .zen-resources {
-    grid-column: 8/-1;
-    grid-row: 3;
+    grid-column: 6/-1;
+    grid-row: 1;
   }
 }
 
