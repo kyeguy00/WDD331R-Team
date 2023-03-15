@@ -1,7 +1,7 @@
 @use "variables" as *; //this puts all the variables in the global namespace.
-@use 'atoms';
-@use 'molecules';
-@use 'organisms' as o;
+@use "atoms";
+@use "molecules";
+@use "organisms" as o;
 
 * {
   box-sizing: border-box;
@@ -16,9 +16,7 @@ body {
   font-size: $font-sm;
   color: $text-dark;
   margin: 0;
-
 }
-
 
 header {
   // padding-bottom: 100px;
@@ -89,7 +87,6 @@ header {
   }
   95% {
     transform: scale($boombox-original);
-    
   }
   100% {
     transform: scale($boombox-increase);
@@ -97,14 +94,18 @@ header {
   }
 }
 
+
 /**********************************/
 /****** INSERT IMAGES *************/
 h2::after {
-  content:  url(images/Boombox-137.png);
+  content: url(images/boombox-dark.svg);
   position: absolute;
-  top: -200px;
+  top: -40px;
+  right: -220px;
+  z-index: 100;
+  width: 250px;
+  height: 250px;
   padding-left: 2rem;
-  transform: scale($boombox-original);
   animation-name: boombox;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -112,7 +113,10 @@ h2::after {
   filter: drop-shadow(20px 15px 40px $accent4);
 }
 
-.explanation, .participation, .sidebar, .benefits {
+.explanation,
+.participation,
+.sidebar,
+.benefits {
   position: relative;
 }
 
@@ -131,139 +135,122 @@ h2::after {
   right: 450px;
 }
 
-.benefits {
-  position: relative;
-}
-
 .benefits::after {
-  content: url(images/Boombox-138.png); /* speaker dark */
+  content: url(images/boombox-light.svg); /* boombox light */
   position: absolute;
+  width: 350px;
+  height: 350px;
   z-index: 100;
-  bottom: -185px;
-  left: 350px;
-  transform: scale(.65);
-}
-
-.sidebar {
-  position: relative;
+  bottom: -50px;
+  left: 500px;
+  filter: drop-shadow(10px 15px 40px $accent4);
 }
 
 .sidebar::before {
-  content: url(images/stickers-185.png); /* speaker dark */
-  // grid-column: 1/ span 6;
+  content: url(images/speaker-dark.svg); /* speaker dark */
+  height: 350px;
+  width: 350px;
   position: absolute;
-  left: 500px;
-  top: -75px;
-  transform: scale(.75);
+  left: 650px;
+  top: 75px;
 }
 
+@media only screen and (min-width: $breakpoint-phone) {
+  body {
+    font-size: $font-lrg;
+  }
+  .page-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 
+  /******  Header & Intro ******/
 
-@media only screen and (min-width: $breakpoint-phone){
+  .intro {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    background-color: $accent2;
+  }
 
-body {
-  font-size: $font-lrg;
-}
-.page-wrapper {
-  max-width: 1000px;
-  margin: 0 auto;
-}
+  header {
+    grid-column: 1 / span 9;
+    font-size: 25px;
+  }
 
-/******  Header & Intro ******/
+  .summary {
+    grid-column: 1 / -1;
+  }
 
-.intro {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 0 20px;
-  background-color: $accent2;
+  .preamble {
+    background-color: $grey;
+    grid-column: 1 / -1;
+  }
 
-}
-
-header {
-  grid-column: 1 / span 9;
-  font-size: 25px;
-
-}
-
-.summary {
-  grid-column: 1 / -1;
-}
-
-.preamble {
-  background-color: $grey;
-  grid-column: 1 / -1;
-}
-
-
-/*  Organize paragraphs in 2 columns by using nth child
+  /*  Organize paragraphs in 2 columns by using nth child
     to place into grid columns???? */
 
+  /****** MAIN *******/
 
+  .main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    background-color: $background-color;
+  }
 
-/****** MAIN *******/
+  .explanation {
+    grid-column: 1 / span 6;
+    grid-row: 1;
+    background-color: $background-color;
+    margin: $t-margin1 $font-margin;
+  }
 
-.main {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 0 20px;
-  background-color: $background-color;
-}
+  .participation {
+    grid-column: 7 / span 6;
+    grid-row: 2;
+    background-color: $background-color;
+    margin: $t-margin1 $font-margin;
+  }
 
-.explanation {
-  grid-column: 1/ span 6;
-  grid-row: 1;
-  background-color: $background-color;
-  margin: $t-margin1 $font-margin;
-}
+  .benefits {
+    grid-column: 1 / span 6;
+    grid-row: 4;
+    background-color: $background-color;
+    margin: $t-margin1 $font-margin;
+  }
 
-.participation {
-  grid-column: 7/ span 6;
-  grid-row: 2;
-  background-color: $background-color;
-  margin: $t-margin1 $font-margin;
-}
+  .requirements {
+    grid-column: 1 / span 12;
+    /* arrange in 2 columns by <p> nth child */
+  }
 
-.benefits {
-  grid-column: 1/ span 6;
-  grid-row: 4;
-  background-color: $background-color;
-  margin: $t-margin1 $font-margin;
-}
+  footer {
+    grid-column: 1 / span 12;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
 
-.requirements {
-  grid-column: 1/ span 12;
-  /* arrange in 2 columns by <p> nth child */
-}
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 0 20px;
+    background-color: $accent2;
+  }
 
+  .design-selection {
+    grid-column: 1/-1;
+    grid-row: 1;
+  }
 
-footer {
-  grid-column: 1/span 12;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-}
+  .design-archives {
+    grid-column: 1/-1;
+    grid-row: 2;
+  }
 
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-gap: 0 20px;
-  background-color: $accent2;
-}
-
-.design-selection {
-  grid-column: 1/-1;
-  grid-row: 1;
-}
-
-.design-archives {
-  grid-column: 1/-1;
-  grid-row: 2;
-}
-
-.zen-resources {
-  grid-column: 6/-1;
-  grid-row: 1;
-}
-
-
+  .zen-resources {
+    grid-column: 6/-1;
+    grid-row: 1;
+  }
 }

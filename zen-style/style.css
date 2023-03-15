@@ -171,79 +171,82 @@ header {
 /******* ANIMATIONS ************/
 @keyframes boombox {
   0% {
-    transform: scale(0.35);
+    transform: scale(0.75);
     rotate: -15deg;
   }
   10% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   15% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   20% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   25% {
-    transform: scale(0.35);
+    transform: scale(0.75);
     rotate: 15deg;
   }
   30% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   35% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   40% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   45% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   50% {
-    transform: scale(0.4);
+    transform: scale(1);
     rotate: -15deg;
   }
   55% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   60% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   65% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   70% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   75% {
-    transform: scale(0.35);
+    transform: scale(0.75);
     rotate: 15deg;
   }
   80% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   85% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   90% {
-    transform: scale(0.4);
+    transform: scale(1);
   }
   95% {
-    transform: scale(0.35);
+    transform: scale(0.75);
   }
   100% {
-    transform: scale(0.4);
+    transform: scale(1);
     rotate: -15deg;
   }
 }
 /**********************************/
 /****** INSERT IMAGES *************/
 h2::after {
-  content: url(images/Boombox-137.png);
+  content: url(images/boombox-dark.svg);
   position: absolute;
-  top: -200px;
+  top: -40px;
+  right: -220px;
+  z-index: 100;
+  width: 250px;
+  height: 250px;
   padding-left: 2rem;
-  transform: scale(0.35);
   animation-name: boombox;
   animation-duration: 6s;
   animation-iteration-count: infinite;
@@ -251,7 +254,10 @@ h2::after {
   filter: drop-shadow(20px 15px 40px #0E1131);
 }
 
-.explanation, .participation {
+.explanation,
+.participation,
+.sidebar,
+.benefits {
   position: relative;
 }
 
@@ -269,29 +275,24 @@ h2::after {
   right: 450px;
 }
 
-.benefits {
-  position: relative;
-}
-
 .benefits::after {
-  content: url(images/Boombox-138.png); /* speaker dark */
+  content: url(images/boombox-light.svg); /* boombox light */
   position: absolute;
+  width: 350px;
+  height: 350px;
   z-index: 100;
-  bottom: -185px;
-  left: 350px;
-  transform: scale(0.65);
-}
-
-.sidebar {
-  position: relative;
+  bottom: -50px;
+  left: 500px;
+  filter: drop-shadow(10px 15px 40px #0E1131);
 }
 
 .sidebar::before {
-  content: url(images/stickers-185.png); /* speaker dark */
+  content: url(images/speaker-dark.svg); /* speaker dark */
+  height: 350px;
+  width: 350px;
   position: absolute;
-  left: 500px;
-  top: -75px;
-  transform: scale(0.75);
+  left: 650px;
+  top: 75px;
 }
 
 @media only screen and (min-width: 600px) {
@@ -321,7 +322,7 @@ h2::after {
     grid-column: 1/-1;
   }
   /*  Organize paragraphs in 2 columns by using nth child
-      to place into grid columns???? */
+    to place into grid columns???? */
   /****** MAIN *******/
   .main {
     display: grid;
