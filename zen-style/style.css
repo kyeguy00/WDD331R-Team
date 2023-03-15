@@ -249,10 +249,10 @@ h2::after {
   height: 250px;
   padding-left: 2rem;
   animation-name: boombox;
-  animation-duration: 6s;
+  animation-duration: 8s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  filter: drop-shadow(7px 15px 7px #A79471);
+  /* filter: drop-shadow(7px 15px 7px $dShadow); */
 }
 
 .explanation,
@@ -284,18 +284,17 @@ h2::after {
   z-index: 100;
   bottom: -50px;
   left: 500px;
-  /* filter: drop-shadow(10px 15px 40px $accent4); */
+  /* filter: drop-shadow(10px 15px 40px $dShadow); */
 }
 
-.sidebar::before {
-  content: url(images/speaker-dark.svg); /* speaker dark */
+/* .sidebar::before {
+  content: url(images/speaker-dark.svg); /* speaker dark
   height: 350px;
   width: 350px;
   position: absolute;
   left: 650px;
   top: 75px;
-}
-
+} */
 /************* View Sizes **************/
 /***************************************/
 @media only screen and (min-width: 600px) {
@@ -312,7 +311,6 @@ h2::after {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: ; */
     z-index: -100;
     height: auto;
     max-width: 1000px;
@@ -379,16 +377,16 @@ h2::after {
     background-color: #f0d58c;
   }
   .design-selection {
-    grid-column: 1/-1;
+    grid-column: 1/6;
+    grid-row: 1;
+  }
+  .zen-resources {
+    grid-column: 8/-1;
     grid-row: 1;
   }
   .design-archives {
     grid-column: 1/-1;
     grid-row: 2;
-  }
-  .zen-resources {
-    grid-column: 6/-1;
-    grid-row: 1;
   }
 }
 
