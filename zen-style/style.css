@@ -168,6 +168,10 @@ header {
   position: relative;
 }
 
+h1 {
+  margin-top: 0;
+}
+
 /**********************/
 /******* ANIMATIONS ************/
 @keyframes boombox {
@@ -237,16 +241,21 @@ header {
     rotate: -15deg;
   }
 }
-/**********************************/
-/****** INSERT IMAGES *************/
-h2::after {
+/***************** Mobile Images ****************/
+.explanation,
+.participation,
+.sidebar,
+.benefits {
+  position: relative;
+}
+
+h2::before {
   content: url(images/boombox-dark.svg);
   position: absolute;
-  top: -40px;
-  right: -220px;
+  top: 0px;
+  right: 0px;
   z-index: 100;
-  width: 250px;
-  height: 250px;
+  width: 100px;
   padding-left: 2rem;
   animation-name: boombox;
   animation-duration: 8s;
@@ -255,49 +264,42 @@ h2::after {
   /* filter: drop-shadow(7px 15px 7px $dShadow); */
 }
 
-.explanation,
-.participation,
-.sidebar,
-.benefits {
-  position: relative;
-}
-
 .explanation::after {
   content: url(images/speaker-187.svg); /* subwoofer */
   position: absolute;
-  width: 650px;
+  height: 250px;
+  width: 250px;
   top: 0;
-  left: 400px;
+  right: 200px;
 }
 
-.participation::before {
-  /* Try to add a gradient that rotates to the speaker circles for glowing speaker effect */
-  content: url(images/speaker-186.svg); /* speaker light */
+.participation::after {
+  content: url(images/speaker-186.svg);
   position: absolute;
-  width: 650px;
+  width: 250px;
   top: 10px;
-  right: 400px;
+  right: 200px;
 }
 
-.benefits::after {
-  content: url(images/boombox-light.svg); /* boombox light */
+.benefits::before {
+  content: url(images/boombox-light.svg);
   position: absolute;
   width: 350px;
   height: 350px;
   z-index: 100;
   bottom: -50px;
-  left: 500px;
-  /* filter: drop-shadow(10px 15px 40px $dShadow); */
+  right: 200px;
 }
 
-/* .sidebar::before {
-  content: url(images/speaker-dark.svg); /* speaker dark
-  height: 350px;
-  width: 350px;
+.resource::after {
+  content: url(images/speaker-dark.svg); /* speaker dark */
+  height: 150px;
+  width: 150px;
   position: absolute;
-  left: 650px;
-  top: 75px;
-} */
+  right: 200px;
+  top: 10px;
+}
+
 /************* View Sizes **************/
 /***************************************/
 @media only screen and (min-width: 600px) {
@@ -391,6 +393,68 @@ h2::after {
     grid-column: 1/-1;
     grid-row: 2;
   }
+  /**********************************/
+  /****** INSERT IMAGES *************/
+  h2::before {
+    display: none;
+  }
+  .explanation::before {
+    display: none;
+  }
+  .participation::after {
+    display: none;
+  }
+  .benefits::before {
+    display: none;
+  }
+  h2::after {
+    content: url(images/boombox-dark.svg);
+    position: absolute;
+    top: -40px;
+    right: -220px;
+    z-index: 100;
+    width: 250px;
+    height: 250px;
+    padding-left: 2rem;
+    animation-name: boombox;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+    /* filter: drop-shadow(7px 15px 7px $dShadow); */
+  }
+  .explanation::after {
+    content: url(images/speaker-187.svg); /* subwoofer */
+    position: absolute;
+    width: 650px;
+    top: 0;
+    left: 400px;
+  }
+  .participation::before {
+    /* Try to add a gradient that rotates to the speaker circles for glowing speaker effect */
+    content: url(images/speaker-186.svg); /* speaker light */
+    position: absolute;
+    width: 650px;
+    top: 10px;
+    right: 400px;
+  }
+  .benefits::after {
+    content: url(images/boombox-light.svg); /* boombox light */
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    z-index: 100;
+    bottom: -50px;
+    left: 500px;
+    /* filter: drop-shadow(10px 15px 40px $dShadow); */
+  }
+  /* .sidebar::before {
+    content: url(images/speaker-dark.svg); /* speaker dark
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    left: 650px;
+    top: 75px;
+  } */
 }
 
 /*# sourceMappingURL=style.css.map */
