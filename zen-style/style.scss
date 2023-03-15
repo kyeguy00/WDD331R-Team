@@ -7,8 +7,9 @@
   box-sizing: border-box;
 }
 html {
-  background-color: $accent1;
+ /* background-color: $accent1;
   /* padding: 5%; */
+  /* max-width: 50%; */
 }
 
 body {
@@ -97,6 +98,8 @@ header {
 
 /**********************************/
 /****** INSERT IMAGES *************/
+
+
 h2::after {
   content: url(images/boombox-dark.svg);
   position: absolute;
@@ -110,7 +113,7 @@ h2::after {
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  filter: drop-shadow(20px 15px 40px $accent4);
+  filter: drop-shadow(7px 15px 7px $dShadow);
 }
 
 .explanation,
@@ -143,7 +146,7 @@ h2::after {
   z-index: 100;
   bottom: -50px;
   left: 500px;
-  filter: drop-shadow(10px 15px 40px $accent4);
+  /* filter: drop-shadow(10px 15px 40px $accent4); */
 }
 
 .sidebar::before {
@@ -155,6 +158,10 @@ h2::after {
   top: 75px;
 }
 
+
+/************* View Sizes **************/
+/***************************************/
+
 @media only screen and (min-width: $breakpoint-phone) {
   body {
     font-size: $font-lrg;
@@ -164,6 +171,17 @@ h2::after {
     margin: 0 auto;
   }
 
+  body::before {
+    content: url(images/ZG-back2.svg);
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: ; */
+    z-index: -100;
+    height: auto;
+    max-width: 1000px;
+  }
   /******  Header & Intro ******/
 
   .intro {

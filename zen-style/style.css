@@ -152,8 +152,9 @@ footer a {
 }
 
 html {
-  background-color: #e16340;
-  /* padding: 5%; */
+  /* background-color: $accent1;
+   /* padding: 5%; */
+  /* max-width: 50%; */
 }
 
 body {
@@ -251,7 +252,7 @@ h2::after {
   animation-duration: 6s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-out;
-  filter: drop-shadow(20px 15px 40px #0E1131);
+  filter: drop-shadow(7px 15px 7px #A79471);
 }
 
 .explanation,
@@ -283,7 +284,7 @@ h2::after {
   z-index: 100;
   bottom: -50px;
   left: 500px;
-  filter: drop-shadow(10px 15px 40px #0E1131);
+  /* filter: drop-shadow(10px 15px 40px $accent4); */
 }
 
 .sidebar::before {
@@ -295,6 +296,8 @@ h2::after {
   top: 75px;
 }
 
+/************* View Sizes **************/
+/***************************************/
 @media only screen and (min-width: 600px) {
   body {
     font-size: 16px;
@@ -302,6 +305,17 @@ h2::after {
   .page-wrapper {
     max-width: 1000px;
     margin: 0 auto;
+  }
+  body::before {
+    content: url(images/ZG-back2.svg);
+    position: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-image: ; */
+    z-index: -100;
+    height: auto;
+    max-width: 1000px;
   }
   /******  Header & Intro ******/
   .intro {
