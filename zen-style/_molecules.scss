@@ -24,7 +24,7 @@ header {
 
 .summary {
   /* @include atoms.uppercase($text-dark);*/
-  padding: 1.5% 5%;
+  padding: 5%;
   color: $text-light;
   font-weight: 500;
   background: $text-dark;
@@ -40,7 +40,7 @@ header {
 /******** PREAMBLE ************/
 
 .preamble {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: $grey;
   color: $text-dark;
 }
@@ -49,36 +49,36 @@ header {
 
 /*************** EXPLANATION ************/
 .explanation {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: $grey;
 }
 /************* PARTICIPATION ************/
 .participation {
-  padding: 1.5% 5%;
+  padding: 5%;
 }
 
 
 /************ BENEFITS ****************/
 .benefits {
-  padding: 1.5% 5%;
+  padding: 5%;
 }
 
 /*********** REQUIREMENTS ***********/
 .requirements {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: $grey;
 }
 
 /*********** SIDE BAR ***************/
 .sidebar {
-  padding: 1.5% 5%;
+  padding: 5%;
   background-color: $accent2;
 }
 
 
 /*********** FOOTER **************/
 footer {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: $text-dark;
   color: $text-light;
 }
