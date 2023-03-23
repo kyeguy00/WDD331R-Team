@@ -19,14 +19,14 @@
 
       .circle1 {
         animation-name: circle;
-        animation-duration: 1.5s;
+        animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
       }
 
       .circle2 {
         animation-name: circle;
-        animation-duration: 1.5s;
+        animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         animation-delay: 200ms;
@@ -34,7 +34,7 @@
 
       .circle3 {
         animation-name: circle;
-        animation-duration: 1.5s;
+        animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         animation-delay: 400ms;
@@ -42,7 +42,7 @@
 
       .circle4 {
         animation-name: circle;
-        animation-duration: 1.5s;
+        animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-timing-function: ease-in-out;
         animation-delay: 600ms;
