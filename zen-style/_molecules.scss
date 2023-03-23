@@ -28,9 +28,6 @@ header {
   color: $text-light;
   font-weight: 500;
   background: $text-dark;
-  p:last-child {
-  /*   @include atoms.divider; */
-  }
   a {
     color: $text-light; //in this case the link wants to be light instead of the default dark
   }
