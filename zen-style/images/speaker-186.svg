@@ -2,6 +2,20 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.02 144">
   <defs>
     <style>
+      @keyframes spinMe {
+        from {
+          transform: rotate(0deg);
+          }
+          to {
+          transform: rotate(360deg);
+        }
+      }
+
+      @keyframes speaker {
+        0% {fill: #e16340};
+
+      }
+
       .cls-1 {
         fill: #f9dca8;
       }
@@ -17,8 +31,13 @@
       .cls-4 {
         /* This is the speaker class to add a gradient, blur, and roatation to */
         /* fill: #e16340; */
-        fill: url(#gradientStart);
+        /* fill: url(#gradientStart);
+        /* transform: rotate(135deg); */
+        /* animation: spinMe 5s steps(2) .2s infinite ; */
+        animation: speaker .75s infinite ease-in-out;
+
       }
+
 
       .cls-5 {
         fill: #783a3a;
@@ -35,6 +54,7 @@
         stroke: #783a3a;
       }
 
+
       .cls-6 {
         stroke: #0e1131;
       }
@@ -43,23 +63,27 @@
       .cls-7 {
         fill: none;
       }
+
+      .newColor {
+        fill: #F6C162;
+      }
     </style>
   </defs>
   <rect class="cls-2" x="48.87" y="4.52" width="59.79" height="120.94" rx="2.33" ry="2.33" />
   <rect class="cls-1" x="53.1" y="24.9" width="51.45" height="97.24" />
   <rect class="cls-5" x="53.1" y="8.43" width="51.45" height="17.38" rx="1.13" ry="1.13" />
-  <circle class="cls-1" cx="78.86" cy="100.69" r="4.95" />
-  <circle class="cls-3" cx="64.82" cy="17.12" r="2.97" />
-  <circle class="cls-3" cx="73.92" cy="17.12" r="2.97" />
-  <circle class="cls-3" cx="83.42" cy="17.12" r="2.97" />
-  <circle class="cls-3" cx="92.91" cy="17.12" r="2.97" />
-  <circle class="cls-5" cx="78.76" cy="72.65" r="2.97" />
-  <circle class="cls-4" cx="78.86" cy="45.15" r="14.05" />
-  <circle class="cls-7" cx="78.86" cy="72.92" r="7.02" />
-  <rect class="cls-6" x="53.1" y="8.43" width="51.45" height="113.71" rx="1.7" ry="1.7" />
-  <circle class="cls-5" cx="78.86" cy="45.15" r="4.95" />
-  <circle class="cls-4" cx="78.86" cy="100.69" r="14.05" />
-  <circle class="cls-5" cx="78.86" cy="100.69" r="4.95" />
+  <circle class="cls-1 " cx="78.86" cy="100.69" r="4.95" />
+  <circle class="cls-3 l1" cx="64.82" cy="17.12" r="2.97" />
+  <circle class="cls-3 l2" cx="73.92" cy="17.12" r="2.97" />
+  <circle class="cls-3 l3" cx="83.42" cy="17.12" r="2.97" />
+  <circle class="cls-3 l4" cx="92.91" cy="17.12" r="2.97" />
+  <circle class="cls-5  mini-mid" cx="78.76" cy="72.65" r="2.97" />
+  <circle class="cls-4 newColor lsTop" cx="78.86" cy="45.15" r="14.05" />
+  <circle class="cls-7 mid-front" cx="78.86" cy="72.92" r="7.02" />
+  <rect class="cls-6 innerBx" x="53.1" y="8.43" width="51.45" height="113.71" rx="1.7" ry="1.7" />
+  <circle class="cls-5 top-brown-in" cx="78.86" cy="45.15" r="4.95" />
+  <circle class="cls-4 newColor lsBot" cx="78.86" cy="100.69" r="14.05" />
+  <circle class="cls-5 bot-brown-in" cx="78.86" cy="100.69" r="4.95" />
   <linearGradient x1="0" y1="0" x2="100%" y2="100%" id="gradientStart">
     <stop stop-color="#FFFCF7" offset="0" />
     <stop stop-color="#E7EBC5" offset="33%" />
