@@ -5,16 +5,22 @@
       @keyframes spinMe {
         from {
           transform: rotate(0deg);
-          }
-          to {
+        }
+
+        to {
           transform: rotate(360deg);
         }
       }
 
       @keyframes speaker {
-        0% {fill: #e16340};
+        0% {
+          fill: #e16340
+        }
+
+        ;
 
       }
+
 
       .cls-1 {
         fill: #f9dca8;
@@ -34,7 +40,7 @@
         /* fill: url(#gradientStart);
         /* transform: rotate(135deg); */
         /* animation: spinMe 5s steps(2) .5s infinite ; */
-        animation: speaker 1s infinite ease-in-out;
+        animation: speaker 700ms infinite ease-in-out;
 
       }
 
@@ -69,9 +75,13 @@
       }
     </style>
   </defs>
-  <rect class="cls-2" x="48.87" y="4.52" width="59.79" height="120.94" rx="2.33" ry="2.33" />
+  <rect class="cls-2" x="48.87" y="4.52" width="59.79" height="120.94" rx="2.33" ry="2.33">
+    <animate attributeName="rx" begin="0ms" dur="700ms" repeatCount="indefinite" from="100%" to="2%" />
+  </rect>
   <rect class="cls-1" x="53.1" y="24.9" width="51.45" height="97.24" />
-  <rect class="cls-5" x="53.1" y="8.43" width="51.45" height="17.38" rx="1.13" ry="1.13" />
+  <rect class="cls-5" x="53.1" y="8.43" width="51.45" height="17.38" rx="1.13" ry="1.13">
+    <animate attributeName="rx" begin="0ms" dur="700ms" repeatCount="indefinite" from="100%" to="2%" />
+  </rect>
   <circle class="cls-1 " cx="78.86" cy="100.69" r="4.95" />
   <circle class="cls-3 l1" cx="64.82" cy="17.12" r="2.97" />
   <circle class="cls-3 l2" cx="73.92" cy="17.12" r="2.97" />
@@ -80,7 +90,9 @@
   <circle class="cls-5  mini-mid" cx="78.76" cy="72.65" r="2.97" />
   <circle class="cls-4 newColor lsTop" cx="78.86" cy="45.15" r="14.05" />
   <circle class="cls-7 mid-front" cx="78.86" cy="72.92" r="7.02" />
-  <rect class="cls-6 innerBx" x="53.1" y="8.43" width="51.45" height="113.71" rx="1.7" ry="1.7" />
+  <rect class="cls-6 innerBx" x="53.1" y="8.43" width="51.45" height="113.71" rx="1.7" ry="1.7">
+    <animate attributeName="rx" begin="0ms" dur="700ms" repeatCount="indefinite" from="100%" to="2%" />
+  </rect>
   <circle class="cls-5 top-brown-in" cx="78.86" cy="45.15" r="4.95" />
   <circle class="cls-4 newColor lsBot" cx="78.86" cy="100.69" r="14.05" />
   <circle class="cls-5 bot-brown-in" cx="78.86" cy="100.69" r="4.95" />

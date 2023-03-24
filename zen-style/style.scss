@@ -116,8 +116,8 @@ h1 {
 h2::before {
   content: url(images/boombox-dark.svg);
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 45px;
+  right: 10px;
   z-index: 100;
   width: 100px;
   padding-left: 2rem;
@@ -134,8 +134,8 @@ h2::before {
   position: absolute;
   height: 250px;
   width: 250px;
-  bottom: -5px;
-  right: 2px;
+  bottom: -35px;
+  right: -30px;
 }
 
 /* .participation::after {
