@@ -62,14 +62,33 @@ p {
 }
 
 a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: #0E1131;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p > a {
+  color: #e16340;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 
 a:hover {
-  border-color: #e16340;
+  border-bottom: 2px solid #e16340;
+}
+
+ul {
+  line-height: 1.5rem;
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+ul li {
+  margin: 0.5rem;
+}
+
+footer > a:hover {
+  color: #e16340;
+  border-bottom: none;
 }
 
 [role=banner] > h1 {
@@ -88,13 +107,10 @@ header {
 /************* SUMMARY *************/
 .summary {
   /* @include atoms.uppercase($text-dark);*/
-  padding: 1.5% 5%;
+  padding: 5%;
   color: #fff;
   font-weight: 500;
   background: #0E1131;
-}
-.summary p:last-child {
-  /*   @include atoms.divider; */
 }
 .summary a {
   color: #fff;
@@ -102,7 +118,7 @@ header {
 
 /******** PREAMBLE ************/
 .preamble {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: #E5EBEA;
   color: #0E1131;
 }
@@ -110,35 +126,35 @@ header {
 /************** MAIN ***************/
 /*************** EXPLANATION ************/
 .explanation {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: #E5EBEA;
 }
 
 /************* PARTICIPATION ************/
 .participation {
-  padding: 1.5% 5%;
+  padding: 5%;
 }
 
 /************ BENEFITS ****************/
 .benefits {
-  padding: 1.5% 5%;
+  padding: 5%;
 }
 
 /*********** REQUIREMENTS ***********/
 .requirements {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: #E5EBEA;
 }
 
 /*********** SIDE BAR ***************/
 .sidebar {
-  padding: 1.5% 5%;
+  padding: 5%;
   background-color: #f0d58c;
 }
 
 /*********** FOOTER **************/
 footer {
-  padding: 1.5% 5%;
+  padding: 5%;
   background: #0E1131;
   color: #fff;
 }
@@ -149,12 +165,6 @@ footer a {
 
 * {
   box-sizing: border-box;
-}
-
-html {
-  /* background-color: $accent1;
-   /* padding: 5%; */
-  /* max-width: 50%; */
 }
 
 body {
@@ -241,6 +251,15 @@ h1 {
     rotate: -15deg;
   }
 }
+/* @keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+
+}  */
 /***************** Mobile Images ****************/
 .explanation,
 .participation,
@@ -252,8 +271,8 @@ h1 {
 h2::before {
   content: url(images/boombox-dark.svg);
   position: absolute;
-  top: 0px;
-  right: 0px;
+  top: 45px;
+  right: 10px;
   z-index: 100;
   width: 100px;
   padding-left: 2rem;
@@ -264,31 +283,30 @@ h2::before {
   /* filter: drop-shadow(7px 15px 7px $dShadow); */
 }
 
-.explanation::after {
+.resources::after {
   content: url(images/speaker-187.svg); /* subwoofer */
   position: absolute;
   height: 250px;
   width: 250px;
-  top: 0;
-  right: 200px;
+  bottom: -35px;
+  right: -30px;
 }
 
-.participation::after {
+/* .participation::after {
   content: url(images/speaker-186.svg);
   position: absolute;
   width: 250px;
   top: 10px;
   right: 200px;
-}
-
+} */
 .benefits::before {
   content: url(images/boombox-light.svg);
   position: absolute;
   width: 350px;
   height: 350px;
   z-index: 100;
-  bottom: -50px;
-  right: 200px;
+  bottom: -10px;
+  right: 40px;
 }
 
 .resource::after {
@@ -300,6 +318,10 @@ h2::before {
   top: 10px;
 }
 
+.benefits {
+  padding-bottom: 275px;
+}
+
 /************* View Sizes **************/
 /***************************************/
 @media only screen and (min-width: 600px) {
@@ -309,6 +331,9 @@ h2::before {
   .page-wrapper {
     max-width: 1000px;
     margin: 0 auto;
+  }
+  .benefits {
+    padding-bottom: 0;
   }
   body::before {
     content: url(images/ZG-back2.svg);
@@ -351,19 +376,19 @@ h2::before {
     grid-column: 1/span 6;
     grid-row: 1;
     background-color: white;
-    margin: 10px 25px;
+    margin: 40px 35px;
   }
   .participation {
     grid-column: 7/span 6;
     grid-row: 2;
     background-color: white;
-    margin: 10px 25px;
+    margin: 40px 35px;
   }
   .benefits {
     grid-column: 1/span 6;
     grid-row: 4;
     background-color: white;
-    margin: 10px 25px;
+    margin: 40px 35px;
   }
   .requirements {
     grid-column: 1/span 12;
@@ -405,6 +430,12 @@ h2::before {
     display: none;
   }
   .benefits::before {
+    display: none;
+  }
+  .benefits::before {
+    display: none;
+  }
+  .resources::after {
     display: none;
   }
   h2::after {

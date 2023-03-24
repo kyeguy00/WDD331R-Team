@@ -2,12 +2,50 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.02 144">
   <defs>
     <style>
+
+      @keyframes circle {
+          from {fill: #fbec46;}
+          to {fill: #e16340;}
+      }
       .cls-1 {
         fill: #f6c162;
       }
 
       .cls-2 {
         fill: #e16340;
+        stroke: #0e1131;
+        stroke-width: .1px;
+      }
+
+      .circle1 {
+        animation-name: circle;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+      }
+
+      .circle2 {
+        animation-name: circle;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 200ms;
+      }
+
+      .circle3 {
+        animation-name: circle;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 400ms;
+      }
+
+      .circle4 {
+        animation-name: circle;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
+        animation-delay: 600ms;
       }
 
       .cls-3 {
@@ -39,10 +77,10 @@
   <path class="cls-4" d="m104.94,101.66l-41.62,4.22c-2.78,0-5.67-1.29-5.67-4.67V27.57c0-3.38,2.25-6.11,5.03-6.11h42.26c2.78,0,5.03,2.74,5.03,6.11v67.98c0,3.38-2.25,6.11-5.03,6.11Z"/>
   <path class="cls-1" d="m102.32,38.91l-36.02.48c-2.22.03-2.67-1.48-2.68-2.11l-.14-9.57c0-.62.51-2.39,2.73-2.42l34.95-.5c2.22-.03,3.59.96,3.61,2.43l-.1,9.91c0,.62-.88,1.76-2.36,1.79Z"/>
   <rect class="cls-3" x="32.46" y="92.25" width="3.95" height="6.46" rx=".65" ry=".65"/>
-  <circle class="cls-2" cx="71.55" cy="32.03" r="2.73"/>
-  <circle class="cls-2" cx="79.93" cy="31.91" r="2.73"/>
-  <circle class="cls-2" cx="88.66" cy="31.8" r="2.73"/>
-  <circle class="cls-2" cx="97.4" cy="31.68" r="2.73"/>
+  <circle class="cls-2 circle1" cx="71.55" cy="32.03" r="2.73"/>
+  <circle class="cls-2 circle2" cx="79.93" cy="31.91" r="2.73"/>
+  <circle class="cls-2 circle3" cx="88.66" cy="31.8" r="2.73"/>
+  <circle class="cls-2 circle4" cx="97.4" cy="31.68" r="2.73"/>
   <path class="cls-1" d="m101.22,95.02l-33.2,2.77c-2.22,0-4.52-.85-4.52-3.06v-48.38c0-2.22,1.8-4.02,4.02-4.02h33.71c2.22,0,4.02,1.8,4.02,4.02v44.65c0,2.22-1.8,4.02-4.02,4.02Z"/>
   <line class="cls-5" x1="66.84" y1="42.39" x2="67" y2="97.41"/>
   <line class="cls-5" x1="83.55" y1="42.06" x2="83.65" y2="96.04"/>

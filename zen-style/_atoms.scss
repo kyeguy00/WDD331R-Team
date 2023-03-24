@@ -76,11 +76,32 @@ p {
 }
 
 a {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
   color: $text-dark;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+p > a {
+  // border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  color: $accent1;
   text-decoration: none;
   transition: border-color 0.2s ease-in-out;
 }
 a:hover {
-  border-color: $accent1;
+  border-bottom: 2px solid $accent1;
+  // border-color: $accent1;
+}
+
+ul {
+  line-height: 1.5rem;
+  list-style-type: none;
+  padding-inline-start: 0;
+  li {
+    margin: .5rem;
+  }
+}
+
+footer > a:hover {
+  color: $accent1;
+  border-bottom: none;
 }
